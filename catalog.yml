@@ -20,7 +20,7 @@ registry:
     datagouv:
         dateAdded: "2026-04-06T00:00:00Z"
         description: Accès aux données publiques françaises via data.gouv.fr
-        ref: https://mcp.data.gouv.fr/mcp
+        image: aurethedev/datagouv-mcp:latest
         title: data.gouv.fr MCP
         type: server
 
