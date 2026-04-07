@@ -33,7 +33,7 @@ A Docker MCP catalog providing access to French and European public data APIs.
 # 1. Import the catalog
 # docker mcp catalog add french-mcp ./catalog.yml
 # or from URL:
-docker mcp catalog bootstrap https://raw.githubusercontent.com/aureTheDev/french-mcp-catalog/main/catalog.yml
+docker mcp catalog add https://raw.githubusercontent.com/aureTheDev/french-mcp-catalog/main/catalog.yml
 
 # 2. Add servers to a profile
 docker mcp profile server add <profile-name> \
@@ -41,6 +41,13 @@ docker mcp profile server add <profile-name> \
   --server french-mcp/datagouv-mcp \
   --server french-mcp/recherche-entreprise-mcp \
   --server french-mcp/ted-mcp \
+
+# 2.2 Enable server (when no profile command)
+docker mcp server enable insee-mcp
+docker mcp server enable boamp-mcp
+docker mcp server enable datagouv-mcp
+docker mcp server enable recherche-entreprise-mcp
+docker mcp server enable ted-mcp
 
 # 3. Configure the INSEE API key in the profile
 docker mcp profile config <profile-name> --set insee-mcp.insee_api_key=YOUR_KEY
@@ -75,10 +82,9 @@ Claude will call `mcp-config-set` on your behalf.
 ### Method 4 — Via docker mcp config write (PowerShell)
 
 ```powershell
-@"
-insee-mcp:
+docker mcp config write "insee-mcp:
   insee_api_key: YOUR_KEY
-"@ | docker mcp config write
+"
 ```
 
 ---
