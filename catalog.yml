@@ -7,7 +7,7 @@ registry:
         dateAdded: "2026-04-06T00:00:00Z"
         description: Recherche d'appels d'offres BOAMP (marchés publics français)
         image: aurethedev/boamp-mcp:latest
-        title: BOAMP MCP
+    title: BOAMP MCP
         type: server
         tools:
             - name: search_avis
