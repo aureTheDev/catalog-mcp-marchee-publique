@@ -54,11 +54,11 @@ registry:
         title: INSEE MCP
         type: server
         config:
-            - name: insee_api_key
-              env: INSEE_API_KEY
-              description: "Clé API INSEE (optionnelle, augmente les limites de débit)"
-              required: true
-              secret: true
+            insee_api_key:
+                env: INSEE_API_KEY
+                description: "Clé API INSEE (optionnelle, augmente les limites de débit)"
+                required: false
+                secret: true
         tools:
             - name: sirene_get_siren
             - name: sirene_get_siret

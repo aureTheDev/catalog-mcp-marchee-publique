@@ -31,9 +31,9 @@ A Docker MCP catalog providing access to French and European public data APIs.
 
 ```bash
 # 1. Import the catalog
-docker mcp catalog add french-mcp ./catalog.yml
+# docker mcp catalog add french-mcp ./catalog.yml
 # or from URL:
-# docker mcp catalog bootstrap https://raw.githubusercontent.com/aureTheDev/french-mcp-catalog/main/catalog.yml
+docker mcp catalog bootstrap https://raw.githubusercontent.com/aureTheDev/french-mcp-catalog/main/catalog.yml
 
 # 2. Add servers to a profile
 docker mcp profile server add <profile-name> \
@@ -41,7 +41,6 @@ docker mcp profile server add <profile-name> \
   --server french-mcp/datagouv-mcp \
   --server french-mcp/recherche-entreprise-mcp \
   --server french-mcp/ted-mcp \
-  --server french-mcp/insee-mcp
 
 # 3. Configure the INSEE API key in the profile
 docker mcp profile config <profile-name> --set insee-mcp.insee_api_key=YOUR_KEY
