@@ -9,7 +9,7 @@ A Docker MCP catalog providing access to French and European public data APIs.
 ### Step 1 — Pull this catalog
 
 ```bash
-docker mcp catalog pull https://github.com/aureTheDev/french-mcp-catalog.git
+docker mcp catalog import https://github.com/aureTheDev/french-mcp-catalog.git
 ```
 
 ### Step 2 — Add servers to your profile
