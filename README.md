@@ -17,17 +17,16 @@ docker mcp catalog import https://raw.githubusercontent.com/aureTheDev/french-mc
 **Servers with no API key required:**
 
 ```bash
-docker mcp profile server add default --server catalog://mcp/docker-mcp-catalog/boamp-mcp
-docker mcp profile server add default --server catalog://mcp/docker-mcp-catalog/datagouv-mcp
-docker mcp profile server add default --server catalog://mcp/docker-mcp-catalog/recherche-entreprise-mcp
-docker mcp profile server add default --server catalog://mcp/docker-mcp-catalog/ted-mcp
+docker mcp server enable boamp-mcp
+docker mcp server enable datagouv-mcp
+docker mcp server enable recherche-entreprise-mcp
+docker mcp server enable ted-mcp
 ```
 
 **INSEE MCP (API key required):**
 
 ```bash
-docker mcp profile server add default --server catalog://mcp/french-mcp-catalog/insee-mcp
-docker mcp profile config default --set insee-mcp.INSEE_API_KEY=your_api_key_here
+docker mcp server enable insee-mcp --env INSEE_API_KEY=votre_clé_api
 ```
 
 > Get your INSEE API key at [portail-api.insee.fr](https://portail-api.insee.fr) — create an account and generate a key for the SIRENE API.
@@ -35,7 +34,7 @@ docker mcp profile config default --set insee-mcp.INSEE_API_KEY=your_api_key_her
 ### Step 3 — Verify configuration
 
 ```bash
-docker mcp profile config default --get-all
+docker mcp server ls
 ```
 
 ---
