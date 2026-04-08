@@ -49,7 +49,7 @@ registry:
 
     insee-mcp:
         dateAdded: "2026-04-07T00:00:00Z"
-        description: Accès aux APIs INSEE — annuaire SIRENE des entreprises et établissements, métadonnées géographiques (COG) et nomenclatures (NAF). Clé API obligatoire (inscription gratuite sur api.insee.fr).
+        description: Accès aux APIs INSEE — annuaire SIRENE des entreprises et établissements, nomenclature NAF. Filtrage géographique par département intégré. Clé API obligatoire.
         image: aurethedev/insee-mcp:latest
         title: INSEE MCP
         type: server
@@ -63,13 +63,7 @@ registry:
             - name: sirene_get_siren
             - name: sirene_get_siret
             - name: sirene_search_companies
-            - name: sirene_get_succession_links
-            - name: sirene_get_informations
             - name: meta_get_naf_sous_classe
-            - name: meta_list_regions
-            - name: meta_list_departements
-            - name: meta_get_departement
-            - name: meta_get_region
 
     ted-mcp:
         dateAdded: "2026-04-06T00:00:00Z"
