@@ -76,4 +76,3 @@ registry:
             - name: get_notice
             - name: get_notice_xml
             - name: get_notice_docs_url
-            - name: get_sdk_versions
